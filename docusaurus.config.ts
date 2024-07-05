@@ -12,12 +12,14 @@ const config: Config = {
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/cycor-document/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'eclicktech-cycor', // Usually your GitHub org/user name.
+  projectName: 'cycor-document', // Usually your repo name.
+  deploymentBranch: 'gh-pages', // The branch the action should deploy to.
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -105,7 +107,7 @@ const config: Config = {
           items: [
             {
               label: '文档',
-              to: '/docs/intro',
+              to: '/docs/产品简介/intro',
             },
           ],
         },
