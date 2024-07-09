@@ -115,12 +115,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/cycor',
+              label: '飞书',
+              href: 'https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=5f5t2372-0cdb-4e90-ad36-47a0349869b7',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/cycor',
+              label: '微信',
+              href: 'https://mp.weixin.qq.com/s/OB3jU9H91MKFLjQuunlh3w',
             },
             {
               label: 'Twitter',
