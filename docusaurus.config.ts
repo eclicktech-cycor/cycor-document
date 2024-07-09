@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Cycor',
-  tagline: 'Cycor是一个智能化多云管理品牌，旗下有多个解决方案组成，将包括Cycor DevOps、Cycor FinOps(建设中)、Cycor Cloud多云管理平台(建设中)组成产品矩阵',
+  tagline: 'Cycor是一个智能化多云管理品牌，旗下有多个解决方案组成，将包括Cycor DevOps、Cycor Cloud多云管理平台(建设中)组成产品矩阵',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
