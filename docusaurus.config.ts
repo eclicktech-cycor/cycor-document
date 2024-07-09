@@ -59,14 +59,14 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/eclicktech-cycor/cycor-document/tree/gh-pages/docs/',
+            'https://github.com/eclicktech-cycor/cycor-document/tree/gh-pages/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/eclicktech-cycor/cycor-document/tree/gh-pages/blog',
+            'https://github.com/eclicktech-cycor/cycor-document/tree/gh-pages/',
         },
         theme: {
           customCss: './src/css/custom.css',
