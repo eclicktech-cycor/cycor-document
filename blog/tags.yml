@@ -17,9 +17,9 @@ hola:
 
 kubernetes:
   label: Facebook
-  permalink: /facebook
+  permalink: /facebook1
   description: Facebook tag description
 Intranet:
   label: Hello
-  permalink: /hello
+  permalink: /hello2
   description: Hello tag description
