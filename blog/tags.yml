@@ -14,12 +14,3 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
-
-kubernetes:
-  label: Facebook
-  permalink: /facebook1
-  description: Facebook tag description
-Intranet:
-  label: Hello
-  permalink: /hello2
-  description: Hello tag description
