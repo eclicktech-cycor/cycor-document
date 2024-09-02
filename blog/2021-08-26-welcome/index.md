@@ -1,7 +1,7 @@
 ---
 slug: welcome
 title: Welcome
-authors: [Musk,zhang]
+authors: [Musk.zhang]
 tags: [facebook, hello, docusaurus]
 ---
 
