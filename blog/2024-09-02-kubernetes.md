@@ -1,6 +1,6 @@
 ---
-slug: 在内部环境中快速访问自己的kubernetes服务
-title: 在内部环境中快速访问自己的kubernetes服务
+slug: demo
+title: demo
 authors:
   name: Musk.zhang
   title: DevOps Architect
