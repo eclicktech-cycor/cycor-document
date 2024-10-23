@@ -1,7 +1,8 @@
 ---
 sidebar_position: 3
+label: Service
 ---
-# Service简介
+# Service
 在Kubernetes中，Service是一个关键组件，主要用于提供对一组运行在集群中的Pod的统一访问。Service的设计使得Pod可以方便地被外部访问或在集群内部进行通信，同时提供负载均衡功能。
 
 Service支持多种类型，确保了其灵活性和广泛的适用场景。例如，ClusterIP类型使Service仅在集群内部可访问，而NodePort和LoadBalancer类型则允许从集群外部访问Service。此外，ExternalName类型提供了一种将Service映射到集群外部服务的方法，通过返回一个DNS名称来实现。
