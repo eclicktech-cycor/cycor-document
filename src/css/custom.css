@@ -30,5 +30,13 @@
 }
 
 .menu {
-    font-weight: var(--ifm-font-weight-normal);
+  font-weight: var(--ifm-font-weight-normal);
+}
+
+/* 文档内导出的流程图 SVG：随容器缩放 */
+img[src$='deploy-flow.svg'] {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
