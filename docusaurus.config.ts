@@ -4,6 +4,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 
 const config: Config = {
+  markdown: {
+    mermaid: true,
+  },
   title: 'Cycor',
   tagline: 'Cycor是一个智能化多云管理品牌，旗下有多个解决方案组成，将包括Cycor DevOps、Cycor Cloud多云管理平台(建设中)组成产品矩阵',
   favicon: 'img/favicon.ico',
@@ -33,7 +36,7 @@ const config: Config = {
   },
   // ... Your other configurations.
   themes: [
-    // ... Your other themes.
+    '@docusaurus/theme-mermaid',
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
@@ -147,6 +150,9 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    mermaid: {
+      theme: {light: 'neutral', dark: 'dark'},
     },
   } satisfies Preset.ThemeConfig,
 };
