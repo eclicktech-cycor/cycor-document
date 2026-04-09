@@ -25,5 +25,42 @@ LoadBalancer 服务是暴露服务到 internet 的标准方式。
 * annotations: 服务注解列表；  
 * selector: 服务选择器，用于选择目标Pod；  
 
-# 查看Service
-TODO
+## Loadbalance类型
+
+### externalTrafficPolicy
+
+用于控制外部流量（来自集群外部请求）的路由行为
+
+#### 空（默认为Cluster类型）
+
+#### Cluster（推荐）
+
+- 行为：外部流量到达任意节点后，kube-proxy会把流量转发到集群中任意一个健康的pod
+- 负载均衡效果：更好、更均匀，即使某个节点上的pod数量减少，流量也能公平分配到所有pod
+- 适用场景：不需要知道客户端真实ip
+
+#### Local
+
+- 行为：外部流量到达某个节点后，只转发给该节点上运行的pod，如果该节点上没有该S ervice的健康pod，流量会被直接丢弃
+
+- 负载均衡效果：可能不均匀
+
+- **额外影响**&适用场景：
+
+  - 云厂商的 Load Balancer 会通过 **HealthCheck NodePort** 只把流量发给有 Pod 的节点（节点无 Pod 时被标记为不健康）。
+  - 减少了跨节点网络流量，延迟更低、性能更好。
+
+  - 需要**客户端真实源 IP**（如日志分析、IP 限制、WAF、某些安全场景）。
+  - 对跨节点延迟敏感的应用。
+  - 结合 Pod Anti-Affinity（反亲和性）让每个节点 Pod 数量尽量均匀时使用。
+
+### 无头模式
+
+- **不分配 ClusterIP（虚拟 IP） 的 Service**：它绕过了 Kubernetes 内置的负载均衡和代理机制，直接把流量指向后端的 Pod
+- **没有负载均衡**：客户端自己决定连接哪个 Pod（例如通过 DNS 返回的多个 IP 轮询、随机选择，或客户端代码实现特定逻辑）。
+- **DNS 返回 Pod IP**：查询 my-service.my-namespace.svc.cluster.local 时，会得到所有 Pod 的 A 记录（IP）。
+- **适合有状态或需要直接访问 Pod 的场景**。
+
+### 会话亲和性
+
+针对于有状态服务，但一般适用于弱有状态服务，可帮助缓解状态不一致的问题。
